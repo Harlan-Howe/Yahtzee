@@ -46,9 +46,10 @@ public class Board {
 	public void rollSelectedDice(String stringToParse)
 	{
 		// I'm starting this one for you, since we haven't been splitting strings yet.
-		for (int i=0; i<stringToParse.length(); i++)
+		for (int i=0; i<stringToParse.length(); i++) // loop one letter at a time....
 		{
 			String letter = stringToParse.substring(i, i+1);
+			// so now "letter" is one of the letters in the string.
 			// TODO: write code here to look at "letter" and based on it, 
 			//       decide whether to re-roll one of the dice.
 		}
@@ -78,7 +79,7 @@ public class Board {
 	 * perform this calculation, rather than a single, 100+ line method! 
 	 * @param - category. This is an integer. However, rather than putting code numbers 
 	 *   in your code, it will be more readable if you use well-named constants.
-	 *   I would refer you to the public final variables in the ScoreCard class - it
+	 *   I would refer you to the public final variables in the ScoreCard class (e.g., ScoreCard.ONES) - it
 	 *   will be easier to read than the code numbers, themselves. (See the example below.)
 	 * @return how many points should be awarded, based on the dice and the
 	 *   category selected.
@@ -93,7 +94,10 @@ public class Board {
 	 *    •getScoreForCategory(ScoreCard.LARGE_STRAIGHT) would return 0.
 	 */
 	// TODO: Write Board's getScoreForCategory method.
-	
+	// polite suggestion... break this into smaller methods for the various categories. Some of these methods, like the
+	//    ones at the top of the card might work for more than one category. Others, like for full house, might be more
+	//    specialized....
+
 	/**
 	 * gets the list of die frequencies calculated in the updateFrequencies() method.
 	 * @return the list of frequencies.
